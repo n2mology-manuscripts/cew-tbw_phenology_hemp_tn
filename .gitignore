@@ -1,0 +1,7 @@
+.Rhistory
+.RData
+.Rproj.user/
+.lib/
+.cache/
+__pycache__/
+~$*

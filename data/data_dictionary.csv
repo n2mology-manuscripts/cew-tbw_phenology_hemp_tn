@@ -1,0 +1,22 @@
+Column,Definition
+source_id,Stable source-workbook identifier.
+source_workbook,Original workbook filename.
+source_sheet,Original worksheet name.
+source_row,Original worksheet row number.
+record_id,Unique species-observation identifier.
+sample_id,Plant-visit identifier shared by the two species.
+year,"Collection year, 2022 or 2023."
+site,Research site code: ETREC means ETREC-PS; HRREC and NETREC retain their site codes.
+date,Host collection date in YYYY-MM-DD format.
+week,Legacy sampling sequence within the site-year; use date for calendar timing.
+month,Recorded collection month.
+row_label,Planted row identifier; a block in variety sampling.
+range_label,Sampling position; not independent replication.
+block_label,Legacy within-row position; identifies the two-plant group in 2023.
+plot_label,Nitrogen variety-subplot number; hundreds digit identifies the block.
+plant_label,Plant number within the recorded unit.
+variety_original,Recorded variety; scripts change the ten 2023 T2 labels to T1.
+species_original,Hzea = Helicoverpa zea; Cvir = Chloridea virescens.
+nitrogen_original,"Curated nitrogen treatment, lb N/acre; blank outside nitrogen experiment."
+experiment,Recorded experiment label; scripts identify NETREC 2022 as the separate nitrogen experiment.
+larvae,"Nonnegative integer count; blank means unavailable, not zero."

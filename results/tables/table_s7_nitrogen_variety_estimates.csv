@@ -1,0 +1,5 @@
+"Species","Variety","Larvae","Observed plant visits","Rows or blocks","Larvae per plant visit","95% lower limit","95% upper limit"
+"Chloridea virescens","Cherry Wine",143,145,3,0.986206896551724,0.333333333333333,2.15384615384615
+"Chloridea virescens","Sweetened",150,153,3,0.980392156862745,0.435897435897436,1.96969696969697
+"Helicoverpa zea","Cherry Wine",315,145,3,2.17241379310345,0.807692307692308,5.61538461538461
+"Helicoverpa zea","Sweetened",526,153,3,3.43790849673203,1.93589743589744,6.63636363636364

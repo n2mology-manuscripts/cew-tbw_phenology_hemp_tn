@@ -1,0 +1,7 @@
+"Year","Site","Experiment","Scheduled plant visits","Observed plant visits","Unavailable plant visits","Physical units","Observed units","Rows or blocks"
+2022,"ETREC-PS","Variety sampling",78,72,6,30,28,5
+2022,"HRREC","Variety sampling",78,78,0,30,30,5
+2022,"NETREC","Nitrogen experiment",420,298,122,30,29,3
+2023,"ETREC-PS","Variety sampling",224,224,0,28,28,4
+2023,"HRREC","Variety sampling",210,210,0,35,35,5
+2023,"NETREC","Variety sampling",224,224,0,35,35,5
