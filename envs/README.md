@@ -5,10 +5,11 @@ The analyses were run with R 4.6.1. `r_package_requirements.tsv` lists tested pa
 To restore into an external R library, install renv and run from the repository root:
 
 ```r
-install.packages("renv")
 analysis_library <- Sys.getenv("R_LIBS_USER")
 stopifnot(nzchar(analysis_library))
 dir.create(analysis_library, recursive = TRUE, showWarnings = FALSE)
+.libPaths(c(analysis_library, .libPaths()))
+install.packages("renv", lib = analysis_library, repos = "https://cloud.r-project.org")
 renv::restore(lockfile = "envs/renv.lock", library = analysis_library, prompt = FALSE)
 ```
 
