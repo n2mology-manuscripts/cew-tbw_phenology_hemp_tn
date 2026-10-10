@@ -8,6 +8,8 @@ This repository contains collection records, R analyses, figures and supporting 
 
 [Data definitions and analysis notes](data/README.md) describe the design, exclusions and limits of interpretation. Some collections also support the companion parasitoid study; parasitoid results are reported separately.
 
+[Supplementary information (Tables S1–S7)](results/tables/supplementary_information.docx) presents the supporting tables and their scientific notes.
+
 ## Reproduce the results
 
 Install the packages recorded under [envs/](envs/README.md), then run from the repository root:
