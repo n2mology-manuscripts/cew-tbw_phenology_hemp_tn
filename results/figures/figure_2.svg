@@ -27,17 +27,19 @@
 </defs>
 <g clip-path='url(#cpMC4wMHw1MTguNDB8MC4wMHwzMzEuMjA=)'>
 <text x='259.20' y='16.52' text-anchor='middle' style='font-size: 11.00px; font-weight: bold;fill: #171717; font-family: "Arial";' textLength='187.77px' lengthAdjust='spacingAndGlyphs'>NETREC | 2022 nitrogen experiment</text>
-<text x='98.50' y='36.12' text-anchor='middle' style='font-size: 9.30px; font-weight: bold;fill: #171717; font-family: "Arial";' textLength='92.44px' lengthAdjust='spacingAndGlyphs'>Seasonal abundance</text>
-<text x='435.46' y='36.12' text-anchor='middle' style='font-size: 9.30px; font-weight: bold;fill: #171717; font-family: "Arial";' textLength='82.62px' lengthAdjust='spacingAndGlyphs'>Nitrogen contrasts</text>
-<text x='98.50' y='48.34' text-anchor='middle' style='font-size: 8.30px;fill: #171717; font-family: "Arial";' textLength='88.11px' lengthAdjust='spacingAndGlyphs'>Larvae / inspected plant</text>
-<text x='435.46' y='48.13' text-anchor='middle' style='font-size: 7.70px;fill: #171717; font-family: "Arial";' textLength='66.56px' lengthAdjust='spacingAndGlyphs'>Difference from 0 N</text>
-<text x='254.02' y='36.12' text-anchor='middle' style='font-size: 9.30px; font-weight: bold;fill: #171717; font-family: "Arial";' textLength='89.38px' lengthAdjust='spacingAndGlyphs'>Variety associations</text>
-<text x='254.02' y='48.13' text-anchor='middle' style='font-size: 7.70px;fill: #171717; font-family: "Arial";' textLength='62.02px' lengthAdjust='spacingAndGlyphs'>Larvae / plant visit</text>
-<circle cx='168.48' cy='60.94' r='1.81' style='stroke-width: 0.64; stroke: none; fill: #B44A00;' />
-<text x='178.33' y='64.05' style='font-size: 8.70px; font-style: italic;fill: #171717; font-family: "Arial";' textLength='47.78px' lengthAdjust='spacingAndGlyphs'>C. virescens</text>
-<polygon points='288.23,58.13 290.66,62.35 285.80,62.35 ' style='stroke-width: 0.64; stroke: none; fill: #006A9E;' />
-<text x='298.08' y='64.05' style='font-size: 8.70px; font-style: italic;fill: #171717; font-family: "Arial";' textLength='25.09px' lengthAdjust='spacingAndGlyphs'>H. zea</text>
+<text x='103.16' y='29.42' text-anchor='middle' style='font-size: 9.30px; font-weight: bold;fill: #171717; font-family: "Arial";' textLength='92.44px' lengthAdjust='spacingAndGlyphs'>Seasonal abundance</text>
+<text x='103.16' y='42.81' text-anchor='middle' style='font-size: 9.30px; font-weight: bold;fill: #171717; font-family: "Arial";' textLength='74.31px' lengthAdjust='spacingAndGlyphs'>and composition</text>
+<text x='265.94' y='29.42' text-anchor='middle' style='font-size: 9.30px; font-weight: bold;fill: #171717; font-family: "Arial";' textLength='30.50px' lengthAdjust='spacingAndGlyphs'>Variety</text>
+<text x='265.94' y='42.81' text-anchor='middle' style='font-size: 9.30px; font-weight: bold;fill: #171717; font-family: "Arial";' textLength='56.30px' lengthAdjust='spacingAndGlyphs'>associations</text>
+<text x='445.56' y='29.42' text-anchor='middle' style='font-size: 9.30px; font-weight: bold;fill: #171717; font-family: "Arial";' textLength='38.20px' lengthAdjust='spacingAndGlyphs'>Nitrogen</text>
+<text x='445.56' y='42.81' text-anchor='middle' style='font-size: 9.30px; font-weight: bold;fill: #171717; font-family: "Arial";' textLength='41.84px' lengthAdjust='spacingAndGlyphs'>contrasts</text>
+<text x='103.16' y='57.62' text-anchor='middle' style='font-size: 8.30px;fill: #171717; font-family: "Arial";' textLength='88.11px' lengthAdjust='spacingAndGlyphs'>Larvae / inspected plant</text>
+<text x='265.94' y='57.40' text-anchor='middle' style='font-size: 7.70px;fill: #171717; font-family: "Arial";' textLength='97.09px' lengthAdjust='spacingAndGlyphs'>Larvae / inspected plant visit</text>
+<text x='445.56' y='57.40' text-anchor='middle' style='font-size: 7.70px;fill: #171717; font-family: "Arial";' textLength='66.56px' lengthAdjust='spacingAndGlyphs'>Difference from 0 N</text>
 <rect x='8.55' y='70.38' width='501.29' height='233.50' style='stroke-width: 0.83; stroke: #626262;' />
+<text x='15.55' y='80.42' style='font-size: 10.00px; font-weight: bold;fill: #171717; font-family: "Arial";' textLength='7.22px' lengthAdjust='spacingAndGlyphs'>A</text>
+<text x='191.29' y='80.42' style='font-size: 10.00px; font-weight: bold;fill: #171717; font-family: "Arial";' textLength='7.22px' lengthAdjust='spacingAndGlyphs'>B</text>
+<text x='347.85' y='80.42' style='font-size: 10.00px; font-weight: bold;fill: #171717; font-family: "Arial";' textLength='7.22px' lengthAdjust='spacingAndGlyphs'>C</text>
 <line x1='33.70' y1='231.18' x2='172.63' y2='231.18' style='stroke-width: 0.45; stroke: #393939;' />
 <text x='28.51' y='234.04' text-anchor='end' style='font-size: 8.00px;fill: #171717; font-family: "Arial";' textLength='4.45px' lengthAdjust='spacingAndGlyphs'>0</text>
 <line x1='33.70' y1='184.70' x2='172.63' y2='184.70' style='stroke-width: 0.45; stroke: #D8DDE0;' />
@@ -99,7 +101,7 @@
 <line x1='75.30' y1='277.55' x2='75.30' y2='274.90' style='stroke-width: 0.79; stroke: #343434;' />
 <line x1='184.55' y1='291.46' x2='184.55' y2='78.16' style='stroke-width: 0.49; stroke: #ACB2B5;' />
 <line x1='341.11' y1='291.46' x2='341.11' y2='78.16' style='stroke-width: 0.49; stroke: #ACB2B5;' />
-<text x='261.79' y='107.66' text-anchor='middle' style='font-size: 8.40px; font-weight: bold;fill: #171717; font-family: "Arial";' textLength='49.36px' lengthAdjust='spacingAndGlyphs'>Cherry Wine</text>
+<text x='265.94' y='107.66' text-anchor='middle' style='font-size: 8.40px; font-weight: bold;fill: #171717; font-family: "Arial";' textLength='49.36px' lengthAdjust='spacingAndGlyphs'>Cherry Wine</text>
 <line x1='204.25' y1='153.01' x2='204.25' y2='117.24' style='stroke-width: 0.38; stroke: #D8DDE0;' />
 <text x='204.25' y='163.21' text-anchor='middle' style='font-size: 7.20px;fill: #171717; font-family: "Arial";' textLength='4.00px' lengthAdjust='spacingAndGlyphs'>0</text>
 <line x1='228.93' y1='153.01' x2='228.93' y2='117.24' style='stroke-width: 0.38; stroke: #D8DDE0;' />
@@ -122,7 +124,7 @@
 <polygon points='231.96,137.45 233.68,140.43 230.24,140.43 ' style='stroke-width: 0.64; stroke: #006A9E; fill: #FFFFFF;' />
 <line x1='208.24' y1='142.08' x2='231.96' y2='142.08' style='stroke-width: 1.24; stroke: #006A9E;' />
 <polygon points='214.97,139.27 217.40,143.49 212.54,143.49 ' style='stroke-width: 0.64; stroke: none; fill: #006A9E;' />
-<text x='261.79' y='199.40' text-anchor='middle' style='font-size: 8.40px; font-weight: bold;fill: #171717; font-family: "Arial";' textLength='43.86px' lengthAdjust='spacingAndGlyphs'>Sweetened</text>
+<text x='265.94' y='199.40' text-anchor='middle' style='font-size: 8.40px; font-weight: bold;fill: #171717; font-family: "Arial";' textLength='43.86px' lengthAdjust='spacingAndGlyphs'>Sweetened</text>
 <line x1='204.25' y1='244.76' x2='204.25' y2='208.99' style='stroke-width: 0.38; stroke: #D8DDE0;' />
 <text x='204.25' y='254.95' text-anchor='middle' style='font-size: 7.20px;fill: #171717; font-family: "Arial";' textLength='4.00px' lengthAdjust='spacingAndGlyphs'>0</text>
 <line x1='228.93' y1='244.76' x2='228.93' y2='208.99' style='stroke-width: 0.38; stroke: #D8DDE0;' />
@@ -145,7 +147,7 @@
 <polygon points='237.00,229.19 238.72,232.17 235.28,232.17 ' style='stroke-width: 0.64; stroke: #006A9E; fill: #FFFFFF;' />
 <line x1='213.80' y1='233.83' x2='237.00' y2='233.83' style='stroke-width: 1.24; stroke: #006A9E;' />
 <polygon points='221.22,231.02 223.65,235.23 218.78,235.23 ' style='stroke-width: 0.64; stroke: none; fill: #006A9E;' />
-<text x='440.64' y='90.59' text-anchor='middle' style='font-size: 8.80px; font-style: italic;fill: #B44A00; font-family: "Arial";' textLength='48.41px' lengthAdjust='spacingAndGlyphs'>C. virescens</text>
+<text x='445.56' y='90.59' text-anchor='middle' style='font-size: 8.80px; font-style: italic;fill: #B44A00; font-family: "Arial";' textLength='48.41px' lengthAdjust='spacingAndGlyphs'>C. virescens</text>
 <line x1='387.76' y1='178.19' x2='387.76' y2='96.05' style='stroke-width: 0.38; stroke: #D8DDE0;' />
 <line x1='416.66' y1='178.19' x2='416.66' y2='96.05' style='stroke-width: 0.38; stroke: #D8DDE0;' />
 <line x1='445.56' y1='178.19' x2='445.56' y2='96.05' style='stroke-width: 0.64; stroke: #686868;' />
@@ -179,7 +181,7 @@
 <text x='445.56' y='189.44' text-anchor='middle' style='font-size: 7.40px;fill: #171717; font-family: "Arial";' textLength='4.11px' lengthAdjust='spacingAndGlyphs'>0</text>
 <text x='474.47' y='189.44' text-anchor='middle' style='font-size: 7.40px;fill: #171717; font-family: "Arial";' textLength='8.22px' lengthAdjust='spacingAndGlyphs'>10</text>
 <text x='503.37' y='189.44' text-anchor='middle' style='font-size: 7.40px;fill: #171717; font-family: "Arial";' textLength='8.22px' lengthAdjust='spacingAndGlyphs'>20</text>
-<text x='440.64' y='198.23' text-anchor='middle' style='font-size: 8.80px; font-style: italic;fill: #006A9E; font-family: "Arial";' textLength='25.42px' lengthAdjust='spacingAndGlyphs'>H. zea</text>
+<text x='445.56' y='198.23' text-anchor='middle' style='font-size: 8.80px; font-style: italic;fill: #006A9E; font-family: "Arial";' textLength='25.42px' lengthAdjust='spacingAndGlyphs'>H. zea</text>
 <line x1='387.76' y1='285.83' x2='387.76' y2='203.69' style='stroke-width: 0.38; stroke: #D8DDE0;' />
 <line x1='416.66' y1='285.83' x2='416.66' y2='203.69' style='stroke-width: 0.38; stroke: #D8DDE0;' />
 <line x1='445.56' y1='285.83' x2='445.56' y2='203.69' style='stroke-width: 0.64; stroke: #686868;' />
@@ -213,7 +215,11 @@
 <text x='445.56' y='297.08' text-anchor='middle' style='font-size: 7.40px;fill: #171717; font-family: "Arial";' textLength='4.11px' lengthAdjust='spacingAndGlyphs'>0</text>
 <text x='474.47' y='297.08' text-anchor='middle' style='font-size: 7.40px;fill: #171717; font-family: "Arial";' textLength='8.22px' lengthAdjust='spacingAndGlyphs'>10</text>
 <text x='503.37' y='297.08' text-anchor='middle' style='font-size: 7.40px;fill: #171717; font-family: "Arial";' textLength='8.22px' lengthAdjust='spacingAndGlyphs'>20</text>
-<text x='375.32' y='82.76' text-anchor='middle' style='font-size: 7.30px;fill: #171717; font-family: "Arial";' textLength='56.86px' lengthAdjust='spacingAndGlyphs'>lb N/acre (blocks)</text>
+<text x='375.32' y='90.05' text-anchor='middle' style='font-size: 7.30px;fill: #171717; font-family: "Arial";' textLength='56.86px' lengthAdjust='spacingAndGlyphs'>lb N/acre (blocks)</text>
+<circle cx='203.97' cy='319.94' r='1.81' style='stroke-width: 0.64; stroke: none; fill: #B44A00;' />
+<text x='211.53' y='323.16' style='font-size: 9.00px; font-style: italic;fill: #171717; font-family: "Arial";' textLength='49.50px' lengthAdjust='spacingAndGlyphs'>C. virescens</text>
+<polygon points='284.65,317.13 287.08,321.34 282.22,321.34 ' style='stroke-width: 0.64; stroke: none; fill: #006A9E;' />
+<text x='292.21' y='323.16' style='font-size: 9.00px; font-style: italic;fill: #171717; font-family: "Arial";' textLength='26.00px' lengthAdjust='spacingAndGlyphs'>H. zea</text>
 </g>
 </g>
 </svg>

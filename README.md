@@ -18,7 +18,7 @@ Rscript scripts/run_all.r
 
 The command generates two figure sets in `results/figures/`, each as PNG, PDF and editable SVG, and seven supporting CSV tables in `results/tables/`. Intermediate tables and diagnostic renders use an external temporary directory. Set `MANUSCRIPT_WORK_DIR` to retain these files in a separate working directory.
 
-- Figure 1, `combined_phenology_common_scale`: seasonal abundance and composition alongside variety associations across five site-years.
-- Figure 2, `nitrogen_phenology_contrasts`: NETREC 2022 seasonal abundance and composition, pooled variety rates, and within-block nitrogen contrasts.
+- Figure 1, `figure_1`: seasonal abundance and composition alongside variety associations across five site-years (A-E).
+- Figure 2, `figure_2`: NETREC 2022 seasonal abundance and composition (A), pooled variety rates (B), and within-block nitrogen contrasts (C).
 
 [Figure and table captions](results/README.md) define denominators and intervals. SVG labels remain editable; the figures specify Arial. These descriptive estimates do not establish varietal resistance or equivalence among nitrogen treatments.

@@ -79,6 +79,19 @@ txt <- function(label, x, y, size=8.5, bold=FALSE, col="#171717", just="centre",
 }
 seg <- function(x0,y0,x1,y1,col="#343434",lwd=1) grid.segments(x0,y0,x1,y1,gp=gpar(col=col,lwd=lwd))
 dot <- function(x,y,i,size=1.55,col=cols[i],open=FALSE) grid.points(x,y,default.units="npc",pch=if(open)if(i==1)21 else 24 else shapes[i],size=unit(size,"mm"),gp=gpar(col=col,fill=if(open)"white" else col,lwd=.85))
+# Center the complete legend, including symbols and the rendered text widths.
+species_legend <- function(y, size=9) {
+  widths <- vapply(sp_labels, function(label) convertWidth(grobWidth(textGrob(label,
+    gp=gpar(fontfamily="sans",fontsize=size,fontface="italic"))), "npc", valueOnly=TRUE), numeric(1))
+  marker <- convertWidth(unit(4,"mm"),"npc",valueOnly=TRUE)
+  gap <- convertWidth(unit(7,"mm"),"npc",valueOnly=TRUE)
+  x <- (1-sum(widths)-2*marker-gap)/2
+  for(i in 1:2) {
+    dot(x+marker/3,y,i,1.7)
+    txt(sp_labels[i],x+marker,y,size=size,just="left",italic=TRUE)
+    x <- x+marker+widths[i]+gap
+  }
+}
 # Interpolate only inside sampled windows. Verify every segment stays between
 # its observed endpoints; no new peaks, negative rates, or fitted confidence bands.
 curve_key <- function(z) paste(z$year,z$site,z$experiment,z$species)
@@ -104,14 +117,14 @@ curves <- lapply(split(all_seasonal,curve_key(all_seasonal)),function(z) {
 write.csv(do.call(rbind,curves),file.path(out,"interpolated_curves.csv"),row.names=FALSE)
 draw_combined <- function() {
   grid.newpage()
-  txt("Seasonal abundance and composition",.305,.978,size=10,bold=TRUE)
-  txt("Variety associations",.77,.978,size=10,bold=TRUE)
-  txt("Larvae / inspected plant",.305,.957,size=8.4)
-  txt("Larvae / inspected plant visit",.80,.957,size=8.4)
-  dot(.343,.935,1,1.7);txt(sp_labels[1],.359,.935,size=9,just="left",italic=TRUE)
-  dot(.566,.935,2,1.7);txt(sp_labels[2],.583,.935,size=9,just="left",italic=TRUE)
+  seasonal_center <- mean(c(.112,.527))
+  variety_center <- mean(c(.724,.970))
+  txt("Seasonal abundance and composition",seasonal_center,.978,size=10,bold=TRUE)
+  txt("Variety associations",variety_center,.978,size=10,bold=TRUE)
+  txt("Larvae / inspected plant",seasonal_center,.957,size=8.4)
+  txt("Larvae / inspected plant visit",variety_center,.957,size=8.4)
   # Site groups span both columns; site names denote locations, not regional replicates.
-  tops <- .902 - (0:4)*.177
+  tops <- .918 - (0:4)*.177
   bottoms <- tops - .166
   for(g in list(list(ii=1:2,label="ETREC-PS"),list(ii=3:4,label="HRREC"),list(ii=5,label="NETREC"))) {
     yt <- tops[min(g$ii)]+.006; yb <- bottoms[max(g$ii)]-.004
@@ -132,7 +145,7 @@ draw_combined <- function() {
     ticks <- ticks[ticks>=0]; ymax <- max(ticks)
     if(ymax < max(d$larvae_per_plant)) {ticks <- c(ticks,ymax+diff(ticks)[1]);ymax <- max(ticks)}
     py <- function(y) yb+(y/ymax)*(yt-yb)
-    txt(paste0(letters[j],"  ",substr(keys[j],1,4)),.073,top-.007,size=9.2,bold=TRUE,just="left")
+    txt(paste0(LETTERS[j],"  ",substr(keys[j],1,4)),.073,top-.007,size=9.2,bold=TRUE,just="left")
     txt(paste0("n = ",comp$denominator," larvae"),xr,top-.007,size=7.5,just="right")
     for(t in ticks) {
       seg(xl,py(t),xr,py(t),col=if(t==0)"#393939" else "#D8DDE0",lwd=if(t==0).85 else .5)
@@ -197,15 +210,15 @@ draw_combined <- function() {
 draw_nitrogen <- function() {
   grid.newpage()
   txt("NETREC | 2022 nitrogen experiment",.5,.962,size=11,bold=TRUE)
-  txt("Seasonal abundance",.19,.901,size=9.3,bold=TRUE)
-  txt("Nitrogen contrasts",.84,.901,size=9.3,bold=TRUE)
-  txt("Larvae / inspected plant",.19,.863,size=8.3)
-  txt("Difference from 0 N",.84,.863,size=7.7)
-  txt("Variety associations",.49,.901,size=9.3,bold=TRUE)
-  txt("Larvae / plant visit",.49,.863,size=7.7)
-  dot(.325,.816,1,1.7);txt(sp_labels[1],.344,.816,size=8.7,just="left",italic=TRUE)
-  dot(.556,.816,2,1.7);txt(sp_labels[2],.575,.816,size=8.7,just="left",italic=TRUE)
+  centers <- c(mean(c(.065,.333)),mean(c(.394,.632)),mean(c(.748,.971)))
+  txt("Seasonal abundance\nand composition",centers[1],.901,size=9.3,bold=TRUE)
+  txt("Variety\nassociations",centers[2],.901,size=9.3,bold=TRUE)
+  txt("Nitrogen\ncontrasts",centers[3],.901,size=9.3,bold=TRUE)
+  txt("Larvae / inspected plant",centers[1],.835,size=8.3)
+  txt("Larvae / inspected plant visit",centers[2],.835,size=7.7)
+  txt("Difference from 0 N",centers[3],.835,size=7.7)
   grid.rect(x=.5,y=.435,width=.967,height=.705,gp=gpar(fill=NA,col="#626262",lwd=1.1))
+  for(i in 1:3) txt(LETTERS[i],c(.030,.369,.671)[i],.768,size=10,bold=TRUE,just="left")
   d <- all_seasonal[all_seasonal$experiment=="nitrogen",]
   comp <- all_composition[all_composition$experiment=="nitrogen",]
   dates <- sort(unique(as.Date(d$collection_date)));bounds <- as.numeric(range(dates))+c(-2,2)
@@ -240,7 +253,7 @@ draw_nitrogen <- function() {
   vx_var <- function(z).394+z/25*(.632-.394)
   vv <- c("CherryWine","Sweetened");vy_var <- c(.592,.315)
   for(k in 1:2) {
-    txt(if(k==1)"Cherry Wine" else "Sweetened",.505,vy_var[k]+.092,size=8.4,bold=TRUE)
+    txt(if(k==1)"Cherry Wine" else "Sweetened",centers[2],vy_var[k]+.092,size=8.4,bold=TRUE)
     for(t in seq(0,25,5)) {
       seg(vx_var(t),vy_var[k]-.054,vx_var(t),vy_var[k]+.054,col="#D8DDE0",lwd=.5)
       txt(t,vx_var(t),vy_var[k]-.077,size=7.2)
@@ -258,7 +271,7 @@ draw_nitrogen <- function() {
   vl<-.748;vr<-.971;vx<-function(z)vl+(z+20)/40*(vr-vl)
   for(i in 1:2) {
     d<-n[n$species==sp[i],];d<-d[order(d$nitrogen_lb_acre),]; ys<-if(i==1)seq(.685,.485,length.out=4) else seq(.360,.160,length.out=4)
-    txt(sp_labels[i],.85,max(ys)+.051,size=8.8,col=cols[i],italic=TRUE)
+    txt(sp_labels[i],centers[3],max(ys)+.051,size=8.8,col=cols[i],italic=TRUE)
     for(t in seq(-20,20,10))seg(vx(t),min(ys)-.023,vx(t),max(ys)+.025,col=if(t==0)"#686868" else "#D8DDE0",lwd=if(t==0).85 else .5)
     for(j in 1:4) {
       txt(paste0(d$nitrogen_lb_acre[j]," (",d$blocks[j],")"),vl-.015,ys[j],size=8,just="right")
@@ -269,7 +282,8 @@ draw_nitrogen <- function() {
     }
     for(t in seq(-20,20,10))txt(t,vx(t),min(ys)-.049,size=7.4)
   }
-  txt("lb N/acre (blocks)",.724,.758,size=7.3)
+  txt("lb N/acre (blocks)",.724,.736,size=7.3)
+  species_legend(.034)
 }
 # Independently reconstruct the block contrasts used in Figure 2.
 w <- w[is.finite(w$rate) & w$observed_subplots==2,]
@@ -294,8 +308,8 @@ export <- function(name,fun,height) {
                   standalone=TRUE,fix_text_size=TRUE,system_fonts=list(sans="Arial"))
   fun();dev.off()
 }
-export("combined_phenology_common_scale",function()draw_combined(),9.5)
-export("nitrogen_phenology_contrasts",draw_nitrogen,4.6)
+export("figure_1",function(){draw_combined();species_legend(.018)},9.5)
+export("figure_2",draw_nitrogen,4.6)
 check("Analytical inputs unchanged",identical(hashes,vapply(inputs,digest::digest,character(1),algo="sha256",file=TRUE)))
 write.csv(data.frame(path=inputs,sha256=unname(hashes)),file.path(out,"input_manifest.csv"),row.names=FALSE)
 write.csv(checks,file.path(out,"validation.csv"),row.names=FALSE)
@@ -303,7 +317,7 @@ writeLines(capture.output(sessionInfo()),file.path(out,"session_info.txt"))
 cat(nrow(checks),"checks passed; two manuscript data figures generated.\n")
 
 # Render the native SVGs with a second graphics engine for export review.
-for (name in c("combined_phenology_common_scale", "nitrogen_phenology_contrasts")) {
+for (name in c("figure_1", "figure_2")) {
   rsvg::rsvg_png(file.path(figout, paste0(name, ".svg")),
                  file.path(out, paste0(name, "_svg_render.png")), width=1440)
 }
