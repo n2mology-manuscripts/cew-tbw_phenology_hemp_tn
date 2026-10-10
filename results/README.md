@@ -12,7 +12,7 @@ Table S3. Full variety estimates with marginal 95% row-bootstrap intervals.
 
 Table S4. H. zea counts divided by both pest species; nitrogen collections separately identified.
 
-Table S5. Curated nitrogen allocation and confirmed physical unit mapping.
+Table S5. Nitrogen allocation by block, whole plot and variety subplot, with observed-count availability. Sampling ranges identify collection positions, not replicate blocks.
 
 Table S6. Separate 2022 nitrogen experiment: within-block differences from zero N in larvae per inspected plant. Whole plots weight the two varieties equally; only complete subplot pairs enter each contrast. Intervals use the t distribution with one or two degrees of freedom. Negative limits express uncertainty in a difference, not negative counts.
 

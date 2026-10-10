@@ -1,5 +1,5 @@
 # Seasonal abundance, composition and variety associations; separate nitrogen experiment.
-# Read validated estimates; descriptive interpolation; no new inferential model.
+# Read estimates; interpolate observed rates for visual guidance.
 options(warn = 2)
 out <- file.path(work_dir, "diagnostics/figures")
 figout <- "results/figures"
@@ -54,8 +54,6 @@ for (i in seq_len(nrow(v))) {
 }
 write.csv(row_rates, file.path(out, "variety_row_rates.csv"), row.names = FALSE, na = "")
 library(grid)
-labels <- c(BuddhaBelly = "Buddha Belly", CherryBubble = "Cherry Bubble", CherryBubblegum = "Cherry Bubblegum",
-            CherryTrump = "Cherry Trump", HillbillyHash = "Hillbilly Hash", Lifter = "Lifter", Sweetened = "Sweetened", T1 = "T1", T1xCherryWine = "T1 x Cherry Wine")
 composition <- c
 composition$cvir_count <- composition$denominator - composition$numerator
 composition$cvir_share <- 1 - composition$estimate
@@ -193,7 +191,7 @@ draw_combined <- function() {
       txt(t,vx(t),bottom+.007,size=7.4)
     }
     for(k in seq_along(vv)) {
-      txt(labels[vv[k]],vl-.012,vy[k],size=7.8,just="right")
+      txt(vv[k],vl-.012,vy[k],size=7.8,just="right")
       for(i in 1:2) {
         a <- vd[vd$species==sp[i] & vd$variety==vv[k],]
         yy <- vy[k]+if(i==1).0038 else -.0038
@@ -251,7 +249,7 @@ draw_nitrogen <- function() {
   seg(.356,.120,.356,.764,col="#ACB2B5",lwd=.65)
   seg(.658,.120,.658,.764,col="#ACB2B5",lwd=.65)
   vx_var <- function(z).394+z/25*(.632-.394)
-  vv <- c("CherryWine","Sweetened");vy_var <- c(.592,.315)
+  vv <- c("Cherry Wine","Sweetened");vy_var <- c(.592,.315)
   for(k in 1:2) {
     txt(if(k==1)"Cherry Wine" else "Sweetened",centers[2],vy_var[k]+.092,size=8.4,bold=TRUE)
     for(t in seq(0,25,5)) {

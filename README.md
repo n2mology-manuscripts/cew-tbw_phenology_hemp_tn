@@ -4,9 +4,9 @@ This repository contains collection records, R analyses, figures and supporting 
 
 ## Data and analyses
 
-`data/` contains the two collection datasets and a data dictionary. Blank counts denote unavailable observations. The scripts retain observed sampling effort, repeated plant visits and the confirmed field units. Species-specific date totals are divided by inspected plants. Seasonal variety estimates use whole-row resampling; nitrogen summaries retain the three-block design and the unavailable subplot.
+`data/` contains the two collection datasets and a data dictionary. Blank counts denote unavailable observations. The scripts retain observed sampling effort, repeated plant visits and the experimental units. Species-specific date totals are divided by inspected plants. Seasonal variety estimates use whole-row resampling; nitrogen summaries retain the three-block design and the unavailable subplot.
 
-[Data definitions and analysis notes](data/README.md) describe the design, corrections, exclusions and limits of interpretation. Some collections also support the companion parasitoid study; parasitoid results are reported separately.
+[Data definitions and analysis notes](data/README.md) describe the design, exclusions and limits of interpretation. Some collections also support the companion parasitoid study; parasitoid results are reported separately.
 
 ## Reproduce the results
 
